@@ -1,6 +1,6 @@
 	<!-- FOOTER-1
 			============================================= -->
-			<footer id="footer-1" class="wide-40 footer division">
+			<footer id="footer-1" class=" bg-image wide-40 footer division">
 				<div class="container">
 
 
@@ -148,6 +148,7 @@
 		<script src="{{asset('frontend/js/jquery.validate.min.js')}}"></script>
 		<script src="{{asset('frontend/js/jquery.ajaxchimp.min.js')}}"></script>
 		<script src="{{asset('frontend/js/wow.js')}}"></script>
+        <script src="{{asset('frontend/js/timetable.js')}}"></script>
 
 		<!-- Custom Script -->
 		<script src="{{asset('frontend/js/custom.js')}}"></script>

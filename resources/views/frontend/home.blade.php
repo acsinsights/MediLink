@@ -199,7 +199,7 @@
 									</p>
 
 									<!-- Button -->
-									<a href="timetable.html" class="btn btn-sm btn-blue blue-hover mt-25">View Timetable</a>
+									<a href="{{ route('frontend.table') }}" class="btn btn-sm btn-blue blue-hover mt-25">View Timetable</a>
 
 								</div>
 							</div>
@@ -990,7 +990,7 @@
 												</div>	<!-- End Options List -->
 
 												<!-- Button -->
-												<a href="service-1.html" class="btn btn-blue blue-hover mt-30">View More Details</a>
+												<a href="{{ route('frontend.service') }}" class="btn btn-blue blue-hover mt-30">View More Details</a>
 
 											</div>
 										</div>	<!-- END TAB-1 TEXT -->
@@ -1078,7 +1078,7 @@
 												</div>	<!-- End Options List -->
 
 												<!-- Button -->
-												<a href="service-2.html" class="btn btn-blue blue-hover mt-30">View More Details</a>
+												<a href="{{ route('frontend.service') }}" class="btn btn-blue blue-hover mt-30">View More Details</a>
 
 											</div>
 										</div>	<!-- END TAB-2 TEXT -->
@@ -1166,7 +1166,7 @@
 												</div>	<!-- End Options List -->
 
 												<!-- Button -->
-												<a href="service-1.html" class="btn btn-blue blue-hover mt-30">View More Details</a>
+												<a href="{{ route('frontend.service') }}" class="btn btn-blue blue-hover mt-30">View More Details</a>
 
 											</div>
 										</div>	<!-- END TAB-3 TEXT -->
@@ -1254,7 +1254,7 @@
 												</div>	<!-- End Options List -->
 
 												<!-- Button -->
-												<a href="service-2.html" class="btn btn-blue blue-hover mt-30">View More Details</a>
+												<a href="{{ route('frontend.service') }}" class="btn btn-blue blue-hover mt-30">View More Details</a>
 
 											</div>
 										</div>	<!-- END TAB-4 TEXT -->
@@ -1988,7 +1988,7 @@
 							    </p>
 
 								<!-- Button -->
-								<a href="#" class="btn btn-blue blue-hover mt-15">Make An Apointment</a>
+								<a href="{{ route('frontend.appointment') }}" class="btn btn-blue blue-hover mt-15">Make An Apointment</a>
 
 							</div>
 						</div>	<!-- END BANNER TEXT -->
@@ -2009,39 +2009,7 @@
 
 
 
-			<!-- BANNER-6
-			============================================= -->
-			<section id="banner-6" class="bg-scroll banner-section division">
-				<div class="container white-color">
-			 		<div class="row d-flex align-items-center">
 
-
-			 			<!-- BANNER TEXT -->
-						<div class="col-lg-9 icon-xl">
-
-							<!-- Icon -->
-							<span class="flaticon-072-hospital-5"></span>
-
-							<!-- Text -->
-							<div class="banner-txt">
-								<h4 class="h4-lg">Do you search a good and quality medical clinic? We care about your health 24/7</h4>
-								<p class="p-md">Donec vel sapien augue integer urna vel turpis cursus porta luctus</p>
-							</div>
-
-						</div>
-
-
-						<!-- BANNER BUTTON -->
-						<div class="col-lg-3 ">
-							<div class="banner-btn text-right">
-								<a href="contacts-1.html" class="btn btn-md btn-tra-white blue-hover">Get In Touch</a>
-							</div>
-						</div>
-
-
-			 		</div>      <!-- End row -->
-				</div>	    <!-- End container -->
-			</section>	<!-- END BANNER-6 -->
    </div>
 
 @endsection

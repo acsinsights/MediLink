@@ -27,13 +27,14 @@
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- FONT ICONS -->
-    <link href="{{ asset('frontend/releases/v5.7.2/css/all.css') }}" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">
+    <link href="{{ asset('frontend/css/releases/v5.7.2/css/all.css') }}"  rel="stylesheet" crossorigin="anonymous">
     <link href="{{asset ('frontend/css/flaticon.css') }}" rel="stylesheet">
 
     <!-- PLUGINS STYLESHEET -->
     <link href="{{ asset('frontend/css/menu.css') }}" rel="stylesheet">
     <link id="effect" href="{{asset ('frontend/css/dropdown-effects/fade-down.css') }}" media="all" rel="stylesheet">
     <link href="{{asset ('frontend/css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/timetable.css') }}" rel="stylesheet">
     <link href="{{asset ('frontend/css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{asset ('frontend/css/owl.theme.default.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/animate.css') }}" rel="stylesheet">
