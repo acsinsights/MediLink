@@ -34,10 +34,10 @@
     <link href="{{ asset('frontend/css/menu.css') }}" rel="stylesheet">
     <link id="effect" href="{{asset ('frontend/css/dropdown-effects/fade-down.css') }}" media="all" rel="stylesheet">
     <link href="{{asset ('frontend/css/magnific-popup.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/timetable.css') }}" rel="stylesheet">
+    <link href="{{asset('frontend/css/timetable.css') }}" rel="stylesheet">
     <link href="{{asset ('frontend/css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{asset ('frontend/css/owl.theme.default.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/animate.css') }}" rel="stylesheet">
+    <link href="{{asset('frontend/css/animate.css') }}" rel="stylesheet">
     <link href="{{asset ('frontend/css/jquery.datetimepicker.min.css') }}" rel="stylesheet">
 
     <!-- TEMPLATE CSS -->

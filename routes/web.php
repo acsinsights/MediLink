@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\frontend\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,14 +29,36 @@ Route::name('frontend.')->group(function () {
     Route::get('/table', [HomeController::class, 'table'])->name('table');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+
+Route::redirect("/admin", "/login");
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::name('admin.')->group(function () {
+
+        Route::group(['middleware' => 'admin.auth'], function () {
+            // Route::get('/', [DashboardController::class, 'index'])->name('index');
+            Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+        });
+    });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
+Route::post('/profile/image/update', [ProfileController::class, 'image_update'])->name('profile.image.update');
+Route::get('/profile/image/destroy', [ProfileController::class, 'image_destroy'])->name('profile.image.destroy');
 
 require __DIR__.'/auth.php';
