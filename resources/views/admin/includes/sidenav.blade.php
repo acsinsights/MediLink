@@ -463,11 +463,24 @@
                 </a>
             </li>
             <li class="nav-item  ">
-                <a class="nav-link" href=" " role="button" >
+                <a class="nav-link" href=" {{ route('admin.profile') }}" role="button" >
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-settings"></span></span><span class="nav-link-text ps-1">Account Settings</span>
                     </div>
                 </a>
             </li>
+            <li class="nav-item  ">
+                <a class="nav-link" href=" {{ route('admin.testimonial.index') }}" role="button" >
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-comments"></span></span><span class="nav-link-text ps-1">Testimonial</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a class="nav-link" href=" {{ route('admin.message.index') }}" role="button" >
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-user"></span></span><span class="nav-link-text ps-1">Contact Form</span>
+                    </div>
+                </a>
+            </li>
+
 
           </ul>
         </div>

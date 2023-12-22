@@ -116,38 +116,47 @@
 						<!-- CONTACT FORM -->
 				 		<div class="col-lg-5">
 				 			<div class="form-holder mb-40">
-								<form name="contactForm" class="row contact-form">
-
+                                @include('admin.message')
+								<form action="{{ route('frontend.contact.store') }}" class="row contact-form" method="post">
+                                     @csrf
 					                <!-- Contact Form Input -->
-					                <div id="input-name" class="col-md-12">
-					                	<input type="text" name="name" class="form-control name" placeholder="Enter Your Name*" required="">
-					                </div>
+					                <div   class="col-md-12">
+					                	<input type="text" name="name" class="form-control name" placeholder="Enter Your Name*" required="" value="{{ old('name') }}"  {{ $errors->any() ? 'autofocus' : '' }}>
+                                        @error('name')
+                                        <span class="text-danger text-sm">
+                                            {{ $message }}
+                                        </span>
+                                    @enderror
+                                    </div>
 
-					                <div id="input-email" class="col-md-12">
-					                	<input type="text" name="email" class="form-control email" placeholder="Enter Your Email*" required="">
-					                </div>
+					                <div   class="col-md-12">
+					                	<input type="text" name="email" class="form-control email" placeholder="Enter Your Email*" required="" value="{{ old('email') }}">
+                                        @error('email')
+                                        <span class="text-danger text-sm">
+                                            {{ $message }}
+                                        </span>
+                                    @enderror
+                                    </div>
 
-					                <div id="input-phone" class="col-md-12">
-					                	<input type="tel" name="phone" class="form-control phone" placeholder="Enter Your Phone Number*" required="">
-					                </div>
+					                <div   class="col-md-12">
+					                	<input type="tel" name="phone" class="form-control phone" placeholder="Enter Your Phone Number*" required=""  value="{{ old('phone') }}">
+                                        @error('phone')
+                                        <span class="text-danger text-sm">
+                                            {{ $message }}
+                                        </span>
+                                       @enderror
+                                    </div>
 
-					                <!-- Form Select -->
-					                <div id="input-patient" class="col-md-12 input-patient">
-					                    <select id="inlineFormCustomSelect3" name="patient" class="custom-select patient" required="">
-					                        <option value="">Have You Visited Us Before?*</option>
-											<option>New Patient</option>
-											<option>Returning Patient</option>
-											<option>Other</option>
-					                    </select>
-					                </div>
 
-					                <div id="input-subject" class="col-md-12">
-					                	<input type="text" name="subject" class="form-control subject" placeholder="Subject*" required="">
-					                </div>
 
-					                <div id="input-message" class="col-md-12 input-message">
-					                	<textarea class="form-control message" name="message" rows="6" placeholder="Your Message ..." required=""></textarea>
-					                </div>
+					                <div  class="col-md-12 input-message">
+					                	<textarea class="form-control message" name="message" rows="6" placeholder="Your Message ..." required="">{{ old('message') }}</textarea>
+					                  @error('message')
+                                <span class="text-danger text-sm">
+                                    {{ $message }}
+                                </span>
+                            @enderror
+                                    </div>
 
 					                <!-- Contact Form Button -->
 					                <div class="col-lg-12 mt-15 form-btn">
@@ -155,9 +164,9 @@
 					                </div>
 
 					                <!-- Contact Form Message -->
-					                <div class="col-md-12 contact-form-msg text-center">
+					                {{-- <div class="col-md-12 contact-form-msg text-center">
 					                	<div class="sending-msg"><span class="loading"></span></div>
-					                </div>
+					                </div> --}}
 
 				                </form>
 				 			</div>

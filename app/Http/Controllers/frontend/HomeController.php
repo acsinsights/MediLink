@@ -3,13 +3,20 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\FormSubmitMail;
+use App\Models\Message;
 use Illuminate\Http\Request;
-
+use App\Models\User;
+use App\Models\Testimonial;
+use Illuminate\Support\Facades\File;
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('frontend.home');
+        $testimonials = Testimonial::all();
+
+        return view('frontend.home', compact( 'testimonials'));
     }
     public function appointment()
     {
@@ -44,6 +51,27 @@ class HomeController extends Controller
     public function contact()
     {
         return view('frontend.contact');
+
+    }
+    protected function contact_store(Request $request)
+    {
+
+        $request->validate([
+            "name" => "required",
+            "email" => "required|email",
+            "phone" => "required",
+            "message" => "required",
+        ]);
+
+        $form = new Message([
+            "name" => $request->name,
+            "email" => $request->email,
+            "phone" => $request->phone,
+            "message" => $request->message,
+        ]);
+
+        $form->save();
+        return back()->with('success', 'Form submitted successfully');
     }
     public function table()
     {

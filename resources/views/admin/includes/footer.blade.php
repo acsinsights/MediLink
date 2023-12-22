@@ -149,3 +149,8 @@
 <script src="{{ asset('admin-assets/js/polyfill.min.js') }}?features=window.scroll"></script>
 <script src="{{ asset('admin-assets/vendors/list.js') }}/list.min.js') }}"></script>
 <script src="{{ asset('admin-assets/js/theme.js') }}"></script>
+<script src="{{ asset('admin-assets/js/app.js') }}"></script>
+<script src="{{ asset('admin-assets/js/app-menu.js') }}"></script>
+<script src="{{ asset('admin-assets/js/app-invoice-list.js') }}"></script>
+<script src="{{ asset('admin-assets/js/dashboard-analytics.js') }}"></script>
+
