@@ -38,7 +38,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::name('admin.')->group(function () {
 
         Route::group(['middleware' => 'admin.auth'], function () {
-            // Route::get('/', [DashboardController::class, 'index'])->name('index');
             Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
         });
