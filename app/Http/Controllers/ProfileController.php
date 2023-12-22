@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ImageResizer;
 use Intervention\Image\ImageManagerStatic;
@@ -91,13 +90,13 @@ class ProfileController extends Controller
             $image_name =   'user.' . time() . '.' . $profile_image_file->getClientOriginalExtension();
             $image_resize = ImageManagerStatic::make($profile_image_file->getRealPath());
             $image_resize->fit(300, 300);
-            $image_resize->save(public_path('profilee/' . $image_name));
+            $image_resize->save(public_path('profiles/' . $image_name));
         }
 
         $id = Auth::user()->id;
         $user = User::find($id);
         if ($user->profile_img) {
-            $image_path = public_path('profilee/' . $user->profile_img);
+            $image_path = public_path('profiles/' . $user->profile_img);
 
             if (is_file($image_path)) {
                 unlink($image_path);
@@ -114,7 +113,7 @@ class ProfileController extends Controller
         $user = User::find($id);
         if ($user->profile_img) {
         }
-        $image_path = public_path('profilee/' . $user->profile_img);
+        $image_path = public_path('profiles/' . $user->profile_img);
         //    delete image from folder by core php
         if (is_file($image_path)) {
             unlink($image_path);
