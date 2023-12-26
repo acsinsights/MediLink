@@ -90,7 +90,18 @@
 </div>
 </main>
 <!-- ===============================================-->
+<!-- BEGIN: Vendor JS-->
+<script src="{{ asset('admin-assets/vendors/js/vendors.min.js') }}"></script>
+<!-- BEGIN Vendor JS-->
 
+<!-- BEGIN: Page Vendor JS-->
+<script src="{{ asset('admin-assets/vendors/toastr.min.js') }}"></script>
+<script src="{{ asset('admin-assets/vendors/moment.min.js') }}"></script>
+<script src="{{ asset('admin-assets/vendors/js/tables/datatable/datatables.min.js') }}"></script>
+<script src="{{ asset('admin-assets/vendors/js/tables/datatable/datatables.buttons.min.js') }}"></script>
+<script src="{{ asset('admin-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('admin-assets/vendors/js/tables/datatable/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('admin-assets/vendors/js/tables/datatable/responsive.bootstrap.min.js') }}"></script>
 @include('admin.includes.footer')
 </body>
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+
 use App\Http\Controllers\frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\FormController;
@@ -78,10 +79,15 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
         Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
 
+
+
     });
     Route::post('/profile/image/update', [ProfileController::class, 'image_update'])->name('profile.image.update');
     Route::get('/profile/image/destroy', [ProfileController::class, 'image_destroy'])->name('profile.image.destroy');
+
+
 });
+
 
 
 

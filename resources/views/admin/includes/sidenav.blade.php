@@ -468,18 +468,26 @@
                     </div>
                 </a>
             </li>
+            <li class="nav-item dropdown"><a class="nav-link " href="#" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="apps">Our Clientele</a>
+            <li class="nav-item  ">
             <li class="nav-item  ">
                 <a class="nav-link" href=" {{ route('admin.testimonial.index') }}" role="button" >
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-comments"></span></span><span class="nav-link-text ps-1">Testimonial</span>
                     </div>
                 </a>
             </li>
+            <li class="nav-item dropdown"><a class="nav-link " href="#" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="apps">Forms</a>
+            <li class="nav-item  ">
             <li class="nav-item  ">
                 <a class="nav-link" href=" {{ route('admin.message.index') }}" role="button" >
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-user"></span></span><span class="nav-link-text ps-1">Contact Form</span>
                     </div>
                 </a>
             </li>
+            <li class="nav-item dropdown"><a class="nav-link " href="#" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="apps">Integration</a>
             <li class="nav-item  ">
                 <a class="nav-link" href=" {{ route('admin.website-settings.index') }}" role="button" >
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-user"></span></span><span class="nav-link-text ps-1">Website setting</span>
