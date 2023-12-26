@@ -85,6 +85,7 @@ class HomeController extends Controller
         ]);
 
         $form->save();
+        Mail::to(config('app.mail_to_address'))->send(new FormSubmitMail($form, 'Contact'));
         return back()->with('success', 'Form submitted successfully');
     }
     public function table()
