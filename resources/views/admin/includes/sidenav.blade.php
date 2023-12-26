@@ -480,6 +480,12 @@
                     </div>
                 </a>
             </li>
+            <li class="nav-item  ">
+                <a class="nav-link" href=" {{ route('admin.website-settings.index') }}" role="button" >
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-user"></span></span><span class="nav-link-text ps-1">Website setting</span>
+                    </div>
+                </a>
+            </li>
 
 
           </ul>

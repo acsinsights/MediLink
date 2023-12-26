@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\FormController;
 use App\Http\Controllers\admin\TestimonialController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\WebsiteSettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,13 @@ Route::group(['prefix' => 'admin'], function () {
                 Route::get('/testimonials/edit/{id}', [TestimonialController::class, 'edit'])->name('edit');
                 Route::post('/testimonials/update/{id}', [TestimonialController::class, 'update'])->name('update');
                 Route::get('/testimonials/destroy/{id}', [TestimonialController::class, 'destroy'])->name('destroy');
+
+
+
+
+                Route::get('/website-settings', [WebsiteSettingController::class, 'index'])->name('website-settings.index');
+                Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
+                Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
             });
 
             // contact form
@@ -65,6 +73,10 @@ Route::group(['prefix' => 'admin'], function () {
         });
 
         Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+
+        Route::get('/website-settings', [WebsiteSettingController::class, 'index'])->name('website-settings.index');
+        Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
+        Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
 
     });
     Route::post('/profile/image/update', [ProfileController::class, 'image_update'])->name('profile.image.update');

@@ -9,9 +9,22 @@ use App\Models\Message;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Testimonial;
+use App\Models\WebsiteData;
 use Illuminate\Support\Facades\File;
 class HomeController extends Controller
 {
+
+
+    public function getWebsiteSettings()
+    {
+        $settings = WebsiteData::all();
+        $data = [];
+        foreach ($settings as  $setting) {
+            $data[$setting->slug] =   $setting->value;
+        }
+        return $data;
+    }
+
     public function index()
     {
         $testimonials = Testimonial::all();
