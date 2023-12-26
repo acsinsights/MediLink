@@ -57,9 +57,7 @@ Route::group(['prefix' => 'admin'], function () {
                 Route::post('/testimonials/update/{id}', [TestimonialController::class, 'update'])->name('update');
                 Route::get('/testimonials/destroy/{id}', [TestimonialController::class, 'destroy'])->name('destroy');
 
-
-
-
+                
                 Route::get('/website-settings', [WebsiteSettingController::class, 'index'])->name('website-settings.index');
                 Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
                 Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
@@ -70,42 +68,18 @@ Route::group(['prefix' => 'admin'], function () {
                Route::get('/message/destroy/{id}', [FormController::class, 'message_destroy'])->name('message.destroy');
               Route::post('/message/export', [FormController::class, 'message_export'])->name('message.export');
 
-
-        });
-
         Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 
         Route::get('/website-settings', [WebsiteSettingController::class, 'index'])->name('website-settings.index');
         Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
         Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
-
-
-
     });
+});
+
+
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
     Route::post('/profile/image/update', [ProfileController::class, 'image_update'])->name('profile.image.update');
     Route::get('/profile/image/destroy', [ProfileController::class, 'image_destroy'])->name('profile.image.destroy');
-
-
 });
-
-
-
-
-
-
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-
-
-
 require __DIR__.'/auth.php';

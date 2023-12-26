@@ -6,12 +6,14 @@ use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\ImageResizer;
 use Intervention\Image\ImageManagerStatic;
+
+
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Illuminate\Support\Str;
+use App\Http\Controllers\ImageResizer;
 
 use App\Models\User;
 
