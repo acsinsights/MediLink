@@ -6,16 +6,16 @@ use App\Models\Testimonial;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Message;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-
-
         $users= User::all();
+        $messages= Message::all();
         $testimonials = Testimonial::all();
-        return view('admin.dashboard', compact( 'users', 'testimonials'));
+        return view('admin.dashboard', compact( 'users', 'testimonials','messages'));
     }
     public function profile()
     {
