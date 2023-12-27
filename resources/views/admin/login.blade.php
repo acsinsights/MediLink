@@ -104,7 +104,12 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <a class="fs--1" href="forgot-password.html">Forgot Password?</a>
+                                        @if (Route::has('password.request'))
+                                        <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                                            href="{{ route('password.request') }}">
+                                            {{ __('Forgot your password?') }}
+                                        </a>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="mb-3">
