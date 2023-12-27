@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <div class="row g-0">
+    <div class="row g-0 mt-4">
         <div class="col-lg-8 pe-lg-2">
             <div class="card mb-3">
                 <div class="card-header">
@@ -106,16 +106,36 @@
                         </form>
                     </div>
                 </div>
-                <div class="card">
+                
+                {{-- delete account --}}
+                {{-- <div class="card">
                     <div class="card-header">
                         <h5 class="mb-0">Danger Zone</h5>
                     </div>
                     <div class="card-body bg-light">
-                        <h5 class="fs-0">Delete this account</h5>
-                        <p class="fs--1">Once you delete a account, there is no going back. Please be certain.</p><a
-                            class="btn btn-falcon-danger d-block" href="#!">Delete Account</a>
+                        <form method="post" action="{{ route('profile.destroy') }}" class="p-6">
+                            @csrf
+                            @method('delete')
+                            <div class="mt-6">
+                                <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
+
+                                <x-text-input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    class="mt-1 block w-3/4"
+                                    placeholder="{{ __('Password') }}"
+                                />
+
+                                <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
+                            </div>
+
+                            <h5 class="fs-0">Delete this account</h5>
+                            <p class="fs--1">Once you delete a account, there is no going back. Please be certain.</p>
+                            <button class="tn btn-falcon-danger d-block" type="submit">Delete Account </button>
+                        </form>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

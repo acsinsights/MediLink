@@ -9,19 +9,15 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Falcon | Dashboard &amp; Web App Template</title>
+    <title>MediLink - Login</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('admin-assets/img/favicons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ asset('admin-assets/img/favicons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ asset('admin-assets/img/favicons/favicon-16x16.png') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin-assets/img/favicons/favicon.ico') }}">
-    <link rel="manifest" href="{{ asset('admin-assets/img/favicons/manifest.json') }}">
-    <meta name="msapplication-TileImage" content="{{ asset('admin-assets/img/favicons/mstile-150x150.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('admin-assets/img/medilink-fav-icon.svg') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin-assets/img/medilink-fav-icon.svg') }}" width="132"
+        height="72" alt="logo">
+
     <meta name="theme-color" content="#ffffff">
     <script src="{{ asset('admin-assets/js/config.js') }}"></script>
     <script src="{{ asset('vendors/simplebar/simplebar.min.js') }}"></script>
@@ -70,12 +66,16 @@
                 }
             </script>
             <div class="row flex-center min-vh-100 py-6">
-                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4"><a class="d-flex flex-center mb-4"
-                        href="index.html"><img class="me-2"
-                            src="{{ asset('admin-assets/img/icons/spot-illustrations/falcon.png') }}" alt=""
-                            width="58"><span class="font-sans-serif fw-bolder fs-5 d-inline-block">falcon</span></a>
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+
                     <div class="card">
-                        <div class="card-body p-4 p-sm-5">
+                        <div class="card-body  p-sm-5">
+                            <a class="navbar-brand " href="{{ route('admin.dashboard') }}">
+                                <div class="d-flex  mb-3  align-items-center justify-content-center">
+                                    <img src="{{ asset('admin-assets/img/medilink-logo.png') }}" alt=""
+                                        width="280">
+                                </div>
+                            </a>
                             <div class="row flex-between-center mb-2">
                                 <div class="col-auto">
                                     <h5>Log in</h5>
@@ -86,7 +86,8 @@
                             <form action="{{ route('login') }}" method="post">
                                 @csrf
                                 <div class="mb-3">
-                                    <input class="form-control" name="email" type="email" placeholder="Email address">
+                                    <input class="form-control" name="email" type="email"
+                                        placeholder="Email address">
                                 </div>
                                 <div class="mb-3">
                                     <input class="form-control" name="password" type="password" placeholder="Password">
@@ -105,15 +106,16 @@
                                     </div>
                                     <div class="col-auto">
                                         @if (Route::has('password.request'))
-                                        <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
-                                            href="{{ route('password.request') }}">
-                                            {{ __('Forgot your password?') }}
-                                        </a>
+                                            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                                                href="{{ route('password.request') }}">
+                                                {{ __('Forgot your password?') }}
+                                            </a>
                                         @endif
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <button class="btn btn-primary d-block w-100 mt-3" type="submit" name="submit">Log in</button>
+                                    <button class="btn btn-primary d-block w-100 mt-3" type="submit" name="submit">Log
+                                        in</button>
                                 </div>
                             </form>
                             <div class="position-relative mt-4">
@@ -140,8 +142,8 @@
         <div class="offcanvas-header settings-panel-header bg-shape">
             <div class="z-index-1 py-1 light">
                 <div class="d-flex justify-content-between align-items-center mb-1">
-                    <h5 class="text-white mb-0 me-2"><span class="fas fa-palette me-2 fs-0"></span>Settings</h5><button
-                        class="btn btn-primary btn-sm rounded-pill mt-0 mb-0" data-theme-control="reset"
+                    <h5 class="text-white mb-0 me-2"><span class="fas fa-palette me-2 fs-0"></span>Settings</h5>
+                    <button class="btn btn-primary btn-sm rounded-pill mt-0 mb-0" data-theme-control="reset"
                         style="font-size:12px">
                         <span class="fas fa-redo-alt me-1" data-fa-transform="shrink-3"></span>Reset</button>
                 </div>

@@ -27,25 +27,22 @@
                     </div>
                 </div>
             </div>
-            <div class="content-body">
-                <section id="multiple-column-form">
+            <div class="content-body mt-3">
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
                                     <form method="post" enctype="multipart/form-data"
                                         action="{{ route('admin.website-settings.update', $setting->slug) }}"
-                                        class="mt-6 space-y-6">
+                                        class="  space-y-6">
                                         @csrf
                                         <div class="row">
-
                                             <div class="col-12  ">
                                                 <div class="d-flex align-items-center mb-2">
                                                     <i data-feather="link" class="font-medium-3"></i>
                                                     <h4 class="mb-0">Update {{ $setting->name }}</h4>
                                                 </div>
                                             </div>
-
                                             <div class="col-12">
                                                 <x-input-label for="value" :value="$setting->name . ' here'" />
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Company Location"
@@ -69,7 +66,6 @@
                             </div>
                         </div>
                     </div>
-                </section>
             </div>
         </div>
     </div>

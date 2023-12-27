@@ -57,7 +57,7 @@ Route::group(['prefix' => 'admin'], function () {
                 Route::post('/testimonials/update/{id}', [TestimonialController::class, 'update'])->name('update');
                 Route::get('/testimonials/destroy/{id}', [TestimonialController::class, 'destroy'])->name('destroy');
 
-                
+
                 Route::get('/website-settings', [WebsiteSettingController::class, 'index'])->name('website-settings.index');
                 Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
                 Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
@@ -81,5 +81,6 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::post('/profile/image/update', [ProfileController::class, 'image_update'])->name('profile.image.update');
     Route::get('/profile/image/destroy', [ProfileController::class, 'image_destroy'])->name('profile.image.destroy');
+    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 require __DIR__.'/auth.php';

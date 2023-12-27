@@ -7,9 +7,9 @@
             data-bs-toggle="collapse" data-bs-target="#navbarDoubleTop" aria-controls="navbarDoubleTop"
             aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span
                 class="toggle-line"></span></span></button>
-          <a class="navbar-brand me-1 me-sm-3" href="#">
+          <a class="navbar-brand me-1 me-sm-3" href="{{ route('admin.dashboard') }}">
             <div class="d-flex align-items-center"><img class="me-2"
-                src="{{ asset('admin-assets/img/medilink-360-logo.png') }}" alt="" width="40"><span
+                src="{{ asset('admin-assets/img/medilink-logo.png') }}" alt="" width="40"><span
                 class="font-sans-serif">falcon</span></div>
           </a>
           <ul class="navbar-nav align-items-center d-none d-lg-block">
@@ -443,13 +443,14 @@
         }
       </script>
       <div class="d-flex align-items-center">
-        <div class="toggle-icon-wrapper">
+        <div style="margin-right: 1px;" class="toggle-icon-wrapper">
           <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip"
             data-bs-placement="left" title="Toggle Navigation"><span class="navbar-toggle-icon"><span
                 class="toggle-line"></span></span></button>
-        </div><a class="navbar-brand" href="../index.html">
+        </div>
+        <a class="navbar-brand" href="{{ route('admin.dashboard') }}">
           <div class="d-flex align-items-center py-3"><img class="me-2"
-              src="{{ asset('admin-assets/img/medilink-360-logo.png') }}" alt="" width="150">
+              src="{{ asset('admin-assets/img/medilink-logo.png') }}" alt="" height="65">
              </div>
         </a>
       </div>

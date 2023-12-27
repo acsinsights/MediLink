@@ -14,12 +14,9 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="../../../assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="../../../assets/img/favicons/mstile-150x150.png">
+    <link rel="apple-touch-icon" href="{{ asset('admin-assets/img/medilink-fav-icon.svg') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin-assets/img/medilink-fav-icon.svg') }}" width="132"
+        height="72" alt="logo">
     <meta name="theme-color" content="#ffffff">
     <script src="../../../assets/js/config.js"></script>
     <script src="../../../vendors/simplebar/simplebar.min.js"></script>
@@ -69,12 +66,14 @@
                 }
             </script>
             <div class="row flex-center min-vh-100 py-6">
-                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4"><a class="d-flex flex-center mb-4"
-                        href="../../../index.html"><img class="me-2"
-                            src="../../../assets/img/icons/spot-illustrations/falcon.png" alt=""
-                            width="58"><span class="font-sans-serif fw-bolder fs-5 d-inline-block">falcon</span></a>
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
                     <div class="card">
                         <div class="card-body p-4 p-sm-5">
+                            <a class="navbar-brand" href="{{ route('admin.dashboard') }}">
+                                <div class="d-flex  mb-3 align-items-center justify-content-center">
+                                    <img src="{{ asset('admin-assets/img/medilink-logo.png') }}" alt="" width="280">
+                                </div>
+                            </a>
                             <h5 class="text-center">Reset new password</h5>
                             <form class="auth-forgot-password-form mt-2" action="{{ route('password.store') }}"
                                 method="POST">

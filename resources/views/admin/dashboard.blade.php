@@ -5,17 +5,17 @@
 
 
 
-    <div class="row mb-3">
+    <div class="row mb-3 mt-4">
         <div class="col">
             <div class="card bg-100 shadow-none border">
                 <div class="row gx-0 flex-between-center">
-                    <div style="display:block!important;  padding-left: 30px;padding-bottom: 23px;"class="col-sm-auto d-flex align-items-center"><img class="ms-n2"
-                            src="assets/img/illustrations/crm-bar-chart.png" alt="" width="90">
+                    <div class="col-sm-auto d-flex align-items-center">
+                        <img class="ms-n2" src="{{ asset('admin-assets/img/illustrations/crm-bar-chart.png') }}" alt="" width="90">
                         <div>
                             <h6 class="text-primary fs--1 mb-0">Welcome </h6>
                             <h4 class="text-primary fw-bold mb-0">{{ Auth::user()->name }} <span
                                     class="text-info fw-medium"></span></h4>
-                        </div><img class="ms-n4 d-md-none d-lg-block" src="assets/img/illustrations/crm-line-chart.png"
+                        </div><img class="ms-n4 d-md-none d-lg-block" src="{{ asset('admin-assets/img/illustrations/crm-line-chart.png') }}"
                             alt="" width="150">
                     </div>
 
@@ -23,6 +23,7 @@
             </div>
         </div>
     </div>
+
     <div class="row mb-3 g-3">`
         <div class="col-lg-12 col-xxl-9">
             <div class="card mb-3">

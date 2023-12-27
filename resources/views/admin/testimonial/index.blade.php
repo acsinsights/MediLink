@@ -9,7 +9,33 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
+
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex-between-center row">
+                                <div class="col-md">
+                                    <h5 class="mb-2 mb-md-0">Testimonial</h5>
+                                    <div class="breadcrumb-wrapper">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a href="{{ route('admin.dashboard') }}">Dashboard</a>
+                                            </li>
+                                            <li class="breadcrumb-item active">Testimonial
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="{{ route('admin.testimonial.create') }}">
+                                        <button type="submit" class="btn btn-primary">Add Testimonial</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
                             <h2 class="content-header-title float-left mb-0">Testimonial</h2>
@@ -24,20 +50,19 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                </div> --}}
+
+                {{-- <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
                     <div class="card-options">
                         <form style="margin-right: 67px;" action="" method="post">
                             @csrf
                             @method('put')
-                            <a  href="{{ route('admin.testimonial.create') }}" class="btn btn-primary mr-1" style="    width: 180px;">Add Testimonial</a>
+                            <a href="{{ route('admin.testimonial.create') }}" class="btn btn-primary mr-1"
+                                style="    width: 180px;">Add Testimonial</a>
                     </div>
-
-
-                </div>
-
+                </div> --}}
             </div>
-            <div class="content-body">
+            <div class="content-body mt-3">
                 <div class="row" id="basic-table">
                     <div class="col-12">
                         <div class="card">
@@ -45,7 +70,7 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Client Logo</th>
+                                            <th>Client Image</th>
                                             <th>Customer Name</th>
                                             <th>Customer Designation</th>
                                             <th>Customer Company</th>
@@ -58,9 +83,8 @@
                                         @foreach ($testimonials as $tsti)
                                             <tr style="vertical-align: middle;">
                                                 <td>
-                                                    <img src="/testiimages/{{ $tsti->custimg }}" class="img-responsive"
-                                                      alt=""
-                                                        srcset="">
+                                                    <img src="/testiimages/{{ $tsti->custimg }}" width="60"
+                                                        class="img-responsive" alt="" srcset="">
                                                 </td>
                                                 <td>{{ $tsti->custname }}</td>
                                                 <td>{{ $tsti->custdesignation }}</td>
@@ -72,10 +96,10 @@
                                                 </td>
                                                 <td style="text-align: center;">
                                                     <a class="btn btn-flat-danger border"
-                                                    onclick="return confirm('Are you sure?');"
-                                                    href="{{ route('admin.testimonial.destroy', $tsti->id) }}">
-                                                    Delete
-                                                </a>
+                                                        onclick="return confirm('Are you sure?');"
+                                                        href="{{ route('admin.testimonial.destroy', $tsti->id) }}">
+                                                        Delete
+                                                    </a>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -91,4 +115,3 @@
 
 
 @endsection
-

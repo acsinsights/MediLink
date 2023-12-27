@@ -9,15 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <!-- SITE TITLE -->
-    <title>MedService - Medical & Medical Health Landing Page Template</title>
+    <title>MediLink - Medical & Medical Health  </title>
 
     <!-- FAVICON AND TOUCH ICONS  -->
-    <link rel="shortcut icon" href="{{asset('frontend/images/favicon.ico')}}"type="image/x-icon">
-    <link rel="icon" href="{{asset('frontend/images/favicon.ico')}}" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{asset ('frontend/images/apple-touch-icon-152x152.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{asset ('frontend/images/apple-touch-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset ('frontend/images/apple-touch-icon-76x76.png') }}">
-    <link rel="apple-touch-icon" href="{{asset ('frontend/images/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('admin-assets/img/medilink-fav-icon.svg') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin-assets/img/medilink-fav-icon.svg') }}" width="132"
+        height="72" alt="logo">
 
     <!-- GOOGLE FONTS -->
     <link href="{{asset('frontend/css?family=Roboto:300,400,500,700,900')}}" rel="stylesheet">
