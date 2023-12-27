@@ -16,6 +16,8 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "@fortawesome/fontawesome": "^1.1.8"
+        "@fortawesome/fontawesome": "^1.1.8",
+        "dotnav": "^0.0.1",
+        "env": "^0.0.2"
     }
 }

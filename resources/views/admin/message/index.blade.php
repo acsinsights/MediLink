@@ -44,7 +44,8 @@
                                         @enderror
                                     </div>
                                     <div  class="col-sm-4 ">
-                                        <button class="btn btn-info">Export data</button>
+
+                                        <button class="btn btn-primary mr-1"style="width:120px;">Export data</button>
                                     </div>
                                 </div>
                             </form>
@@ -65,8 +66,9 @@
                                         <thead>
                                             <tr>
                                                 <th>#No</th>
-                                                <th>Email</th>
-                                                <th>Name</th>
+                                                 <th>Name</th>
+                                                 <th>Email</th>
+
                                                 <th>Phone no</th>
                                                 <th>Message</th>
                                                 {{-- <th>Date</th> --}}
@@ -83,12 +85,12 @@
                                                             {{ $key + 1 }}</th>
                                                         <td class="view-message dont-show font-weight-semibold">
                                                             <a href="javascript:void(0);">
-                                                                {{ $fm->email }}
+                                                                {{ $fm->name }}
                                                             </a>
                                                         </td>
                                                         <td class="view-message dont-show font-weight-semibold">
                                                             <a href="javascript:void(0);">
-                                                                {{ $fm->name }}
+                                                                {{ $fm->email }}
                                                             </a>
                                                         </td>
                                                         <td class="view-message dont-show font-weight-semibold">

@@ -21,7 +21,7 @@
                                     alt="{{ Auth::user()->name }} profile image" height="80"
                                     width="80">
                             </a>
-                            <div class="media-body mt-75 ml-1">
+                            <div class="media-body mt-75 ml-1" style="   margin-top: 23px;">
                                 <button type="button"
                                     class="btn btn-sm btn-primary mr-0 mr-sm-1 mb-1 mb-sm-0"
                                     data-toggle="modal" data-target="#addImagePopup">
@@ -154,9 +154,7 @@
                                     <div class="custom-file">
                                         <input type="file" name="profile_image" class="custom-file-input"
                                             id="profile_image">
-                                        <label class="custom-file-label" for="profile_image">
-                                            Choose file
-                                        </label>
+
                                     </div>
                                     @error('profile_image')
                                         <span class="text-danger">

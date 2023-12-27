@@ -9,7 +9,7 @@
                 class="toggle-line"></span></span></button>
           <a class="navbar-brand me-1 me-sm-3" href="#">
             <div class="d-flex align-items-center"><img class="me-2"
-                src="{{ asset('admin-assets/img/icons/spot-illustrations/falcon.png') }}" alt="" width="40"><span
+                src="{{ asset('admin-assets/img/medilink-360-logo.png') }}" alt="" width="40"><span
                 class="font-sans-serif">falcon</span></div>
           </a>
           <ul class="navbar-nav align-items-center d-none d-lg-block">
@@ -449,8 +449,8 @@
                 class="toggle-line"></span></span></button>
         </div><a class="navbar-brand" href="../index.html">
           <div class="d-flex align-items-center py-3"><img class="me-2"
-              src="{{ asset('admin-assets/img/icons/spot-illustrations/falcon.png') }}" alt="" width="40"><span
-              class="font-sans-serif">falcon</span></div>
+              src="{{ asset('admin-assets/img/medilink-360-logo.png') }}" alt="" width="150">
+             </div>
         </a>
       </div>
       <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
@@ -464,33 +464,44 @@
             </li>
             <li class="nav-item  ">
                 <a class="nav-link" href=" {{ route('admin.profile') }}" role="button" >
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-settings"></span></span><span class="nav-link-text ps-1">Account Settings</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-wrench"></span></span><span class="nav-link-text ps-1">Account Settings</span>
                     </div>
                 </a>
             </li>
-            <li class="nav-item dropdown"><a class="nav-link " href="#" role="button"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="apps">Our Clientele</a>
-            <li class="nav-item  ">
+            <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                <div class="col-auto navbar-vertical-label">Testimonial</div>
+                <div class="col ps-0">
+                  <hr class="mb-0 navbar-vertical-divider">
+                </div>
+              </div>
             <li class="nav-item  ">
                 <a class="nav-link" href=" {{ route('admin.testimonial.index') }}" role="button" >
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-comments"></span></span><span class="nav-link-text ps-1">Testimonial</span>
                     </div>
                 </a>
             </li>
-            <li class="nav-item dropdown"><a class="nav-link " href="#" role="button"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="apps">Forms</a>
-            <li class="nav-item  ">
+            <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                <div class="col-auto navbar-vertical-label">Forms</div>
+                <div class="col ps-0">
+                  <hr class="mb-0 navbar-vertical-divider">
+                </div>
+              </div>
+
             <li class="nav-item  ">
                 <a class="nav-link" href=" {{ route('admin.message.index') }}" role="button" >
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-user"></span></span><span class="nav-link-text ps-1">Contact Form</span>
                     </div>
                 </a>
             </li>
-            <li class="nav-item dropdown"><a class="nav-link " href="#" role="button"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="apps">Integration</a>
+            <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                <div class="col-auto navbar-vertical-label">Integration</div>
+                <div class="col ps-0">
+                  <hr class="mb-0 navbar-vertical-divider">
+                </div>
+              </div>
             <li class="nav-item  ">
                 <a class="nav-link" href=" {{ route('admin.website-settings.index') }}" role="button" >
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-user"></span></span><span class="nav-link-text ps-1">Website setting</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-wrench"></span></span><span class="nav-link-text ps-1">Website settings</span>
                     </div>
                 </a>
             </li>

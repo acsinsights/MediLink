@@ -30,7 +30,7 @@
                         <form style="margin-right: 67px;" action="" method="post">
                             @csrf
                             @method('put')
-                            <a  href="{{ route('admin.testimonial.create') }}" class="btn btn-primary mr-1">Add Testimonial</a>
+                            <a  href="{{ route('admin.testimonial.create') }}" class="btn btn-primary mr-1" style="    width: 180px;">Add Testimonial</a>
                     </div>
 
 

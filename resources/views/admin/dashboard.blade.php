@@ -9,7 +9,7 @@
         <div class="col">
             <div class="card bg-100 shadow-none border">
                 <div class="row gx-0 flex-between-center">
-                    <div class="col-sm-auto d-flex align-items-center"><img class="ms-n2"
+                    <div style="display:block!important;  padding-left: 30px;padding-bottom: 23px;"class="col-sm-auto d-flex align-items-center"><img class="ms-n2"
                             src="assets/img/illustrations/crm-bar-chart.png" alt="" width="90">
                         <div>
                             <h6 class="text-primary fs--1 mb-0">Welcome </h6>
