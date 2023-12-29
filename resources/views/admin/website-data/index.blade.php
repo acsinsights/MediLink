@@ -1,30 +1,35 @@
 @extends('admin.includes.app')
-@section('title', 'Website Settings')
+@section('title', 'Contact Form')
 @section('content')
 
+
+    <!-- BEGIN: Content-->
     <div class="app-content content ">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
-        <div class="content-wrapper">
-            <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Website Settings</h2>
-                            <div class="breadcrumb-wrapper">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Website Settings
-                                    </li>
-                                </ol>
+        <div class="content-wrapper mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="flex-between-center row">
+                            <div class="col-md">
+                                <h3 class="mb-2 mb-md-0"> Website Settings</h3>
+                                <div class="breadcrumb-wrapper">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="{{ route('admin.dashboard') }}">Dashboard</a>
+                                        </li>
+                                        <li class="breadcrumb-item active">Website Settings
+                                        </li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="content-body">
-                <div class="row" id="basic-table">
+            <div class="content-body mt-3">
+                <div class="row" id="table-striped">
                     <div class="col-12">
                         <div class="card">
                             <div class="table-responsive">
@@ -63,9 +68,11 @@
                                 </table>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 @endsection
+

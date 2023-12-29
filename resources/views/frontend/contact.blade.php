@@ -207,7 +207,7 @@
                         <!-- Title  -->
                         <h3 class="h3-sm">Take the First Step to Help</h3>
 
-                        <h4 class="h4-lg">Call MedService Clinic Now</h4>
+                        <h4 class="h4-lg">Call MediLink Clinic Now</h4>
                         <h2 class="h2-lg">1-800-123-4560</h2>
 
                     </div>

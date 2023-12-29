@@ -13,11 +13,6 @@ use App\Http\Controllers\admin\WebsiteSettingController;
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
 */
 
 Route::name('frontend.')->group(function () {
@@ -41,11 +36,8 @@ Route::redirect("/admin", "/login");
 
 Route::group(['prefix' => 'admin'], function () {
     Route::name('admin.')->group(function () {
-
         Route::group(['middleware' => 'admin.auth'], function () {
             Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-
 
 
             // Testimonials
@@ -56,23 +48,19 @@ Route::group(['prefix' => 'admin'], function () {
                 Route::get('/testimonials/edit/{id}', [TestimonialController::class, 'edit'])->name('edit');
                 Route::post('/testimonials/update/{id}', [TestimonialController::class, 'update'])->name('update');
                 Route::get('/testimonials/destroy/{id}', [TestimonialController::class, 'destroy'])->name('destroy');
-
-
-                Route::get('/website-settings', [WebsiteSettingController::class, 'index'])->name('website-settings.index');
-                Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
-                Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
             });
 
             // contact form
-               Route::get('/message', [FormController::class, 'message_index'])->name('message.index');
-               Route::get('/message/destroy/{id}', [FormController::class, 'message_destroy'])->name('message.destroy');
-              Route::post('/message/export', [FormController::class, 'message_export'])->name('message.export');
+                Route::get('/message', [FormController::class, 'message_index'])->name('message.index');
+                Route::get('/message/destroy/{id}', [FormController::class, 'message_destroy'])->name('message.destroy');
+                Route::post('/message/export', [FormController::class, 'message_export'])->name('message.export');
 
-        Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+                Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 
-        Route::get('/website-settings', [WebsiteSettingController::class, 'index'])->name('website-settings.index');
-        Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
-        Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
+                // Website Settings
+                Route::get('/website-settings', [WebsiteSettingController::class, 'index'])->name('website-settings.index');
+                Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
+                Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
     });
 });
 

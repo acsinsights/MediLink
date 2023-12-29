@@ -26,7 +26,7 @@ class WebsiteDataSeeder extends Seeder
                 [
                     'name' => 'Sales Email',
                     'slug' => 'sales-email',
-                    'value' => 'sales@alyasmeenkw.com',
+                    'value' => 'sales@medilink.com',
                 ],
                 [
                     'name' => 'Company Address',

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> MedService | @yield('title') </title>
+    <title> MediLink | @yield('title') </title>
 
     @include('frontend.layouts.header')
 

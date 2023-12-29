@@ -18,18 +18,6 @@ class ProfileUpdateRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:255'],
             'phone_no' => ['integer'],
-            'sales_no' => ['integer'],
-            'sales_mail' => ['string'],
-            'company_name' => ['string'],
-            'company_location' => ['string', 'max:3000'],
-            'meta_pixel' => ['nullable','string', 'max:2000'],
-            'w_app_wid' => ['nullable','string', 'max:2000'],
-            'chatbot_widgets' => ['nullable','string', 'max:2000'],
-            'g_analytics' => ['nullable','string', 'max:2000'],
-            'company_address' => ['string'],
-            'facebook' => ['nullable', 'string'],
-            'instagram' => ['nullable', 'string'],
-            'linkedin' => ['nullable', 'string'],
             //'profile_img' => ['required'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
         ];

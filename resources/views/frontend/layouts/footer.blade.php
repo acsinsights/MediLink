@@ -113,7 +113,7 @@
 					<div class="bottom-footer">
 						<div class="row">
 							<div class="col-md-12">
-								<p class="footer-copyright">&copy; 2019 <span>MedService</span>. All Rights Reserved</p>
+								<p class="footer-copyright">&copy; 2019 <span>MediLink</span>. All Rights Reserved</p>
 							</div>
 						</div>
 					</div>

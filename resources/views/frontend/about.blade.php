@@ -55,7 +55,7 @@
 							<div class="txt-block pc-30 wow fadeInUp" data-wow-delay="0.4s">
 
 								<!-- Section ID -->
-					 			<span class="section-id blue-color">Welcome to MedService</span>
+					 			<span class="section-id blue-color">Welcome to MediLink</span>
 
 								<!-- Title -->
 								<h3 class="h3-md steelblue-color">Clinic with Innovative Approach to Treatment</h3>

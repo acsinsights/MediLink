@@ -8,14 +8,13 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
-            <div class="content-header row">
-
+            <div class="content-header row mt-4">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
                             <div class="flex-between-center row">
                                 <div class="col-md">
-                                    <h5 class="mb-2 mb-md-0">Testimonial</h5>
+                                    <h3 class="mb-2 mb-md-0">Testimonial</h3>
                                     <div class="breadcrumb-wrapper">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item">
@@ -34,33 +33,6 @@
                         </div>
                     </div>
                 </div>
-
-                {{-- <div class="content-header-left col-md-9 col-12 mb-2">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Testimonial</h2>
-                            <div class="breadcrumb-wrapper">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="{{ route('admin.dashboard') }}">Dashboard</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Testimonial
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-
-                {{-- <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
-                    <div class="card-options">
-                        <form style="margin-right: 67px;" action="" method="post">
-                            @csrf
-                            @method('put')
-                            <a href="{{ route('admin.testimonial.create') }}" class="btn btn-primary mr-1"
-                                style="    width: 180px;">Add Testimonial</a>
-                    </div>
-                </div> --}}
             </div>
             <div class="content-body mt-3">
                 <div class="row" id="basic-table">
@@ -92,10 +64,10 @@
                                                 <td>{{ $tsti->date }}</td>
                                                 <td style="text-align: center;"><a
                                                         href=" {{ route('admin.testimonial.edit', $tsti->id) }}"
-                                                        class="btn btn-flat-primary border">Edit</a>
+                                                        class="btn btn-primary border">Edit</a>
                                                 </td>
                                                 <td style="text-align: center;">
-                                                    <a class="btn btn-flat-danger border"
+                                                    <a class="btn btn-danger border"
                                                         onclick="return confirm('Are you sure?');"
                                                         href="{{ route('admin.testimonial.destroy', $tsti->id) }}">
                                                         Delete

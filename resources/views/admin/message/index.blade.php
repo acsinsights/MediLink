@@ -7,19 +7,13 @@
     <div class="app-content content ">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
-        <div class="content-wrapper">
-
-
-
-
-
-
+        <div class="content-wrapper mt-4">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
                         <div class="flex-between-center row">
                             <div class="col-md">
-                                <h5 class="mb-2 mb-md-0">Contact Form</h5>
+                                <h3 class="mb-2 mb-md-0">Contact Form</h3>
                                 <div class="breadcrumb-wrapper">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item">
@@ -32,7 +26,7 @@
                             </div>
                             <div class="col-md-6">
                                 <form action="{{ route('admin.message.export') }}" method="post">
-                                    <div class="  ">
+                                    <div class="row">
                                         @csrf
                                         <div class="col-sm-4 ">
                                             <input class=" form-control" type="date" name="start_date" id="">
@@ -60,8 +54,6 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="content-body mt-3">
                 <div class="row" id="table-striped">
                     <div class="col-12">
@@ -75,6 +67,7 @@
                                                  <th>Name</th>
                                                  <th>Email</th>
                                                 <th>Phone no</th>
+                                                <th>Date</th>
                                                 <th>Message</th>
                                                 <th class="text-center">Delete</th>
                                             </tr>
@@ -100,6 +93,11 @@
                                                         <td class="view-message dont-show font-weight-semibold">
                                                             <a href="javascript:void(0);">
                                                                 {{ $fm->phone }}
+                                                            </a>
+                                                        </td>
+                                                        <td class="view-message dont-show font-weight-semibold">
+                                                            <a href="javascript:void(0);">
+                                                                {{ $fm->created_at }}
                                                             </a>
                                                         </td>
                                                         <td class="view-message dont-show font-weight-semibold">
@@ -141,9 +139,5 @@
             </div>
         </div>
     </div>
-    <!-- END: Content-->
-
-
-
 @endsection
 

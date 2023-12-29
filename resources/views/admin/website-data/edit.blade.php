@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <x-input-label for="value" :value="$setting->name . ' here'" />
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Company Location"
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" 
                                                     id="value" name="value" type="text" class=" form-control" autocomplete="value">{{ $setting->value }}</textarea>
                                                 <x-input-error
                                                     class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "

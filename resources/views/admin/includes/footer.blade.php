@@ -27,52 +27,25 @@
                         value="dark" data-theme-control="theme"><label
                         class="btn d-inline-block btn-navbar-style fs--1" for="themeSwitcherDark"> <span
                             class="hover-overlay mb-2 rounded d-block"><img class="img-fluid img-prototype mb-0"
-                                src="assets/img/generic/falcon-mode-dark.jpg" alt=""></span><span
+                                src="{{ asset('admin-assets/img/generic/falcon-mode-dark.jpg') }}" alt=""></span><span
                             class="label-text"> Dark</span></label></div>
             </div>
         </div>
         <hr>
-        <div class="d-flex justify-content-between">
-            <div class="d-flex align-items-start"><img class="me-2" src="assets/img/icons/left-arrow-from-left.svg"
-                    width="20" alt="">
-                <div class="flex-1">
-                    <h5 class="fs-0">RTL Mode</h5>
-                    <p class="fs--1 mb-0">Switch your language direction </p><a class="fs--1"
-                        href="documentation/customization/configuration.html">RTL Documentation</a>
-                </div>
-            </div>
-            <div class="form-check form-switch"><input class="form-check-input ms-0" id="mode-rtl" type="checkbox"
-                    data-theme-control="isRTL"></div>
-        </div>
-        <hr>
+
+
         <div class="d-flex justify-content-between">
             <div class="d-flex align-items-start"><img class="me-2" src="assets/img/icons/arrows-h.svg" width="20"
                     alt="">
                 <div class="flex-1">
                     <h5 class="fs-0">Fluid Layout</h5>
-                    <p class="fs--1 mb-0">Toggle container layout system </p><a class="fs--1"
-                        href="documentation/customization/configuration.html">Fluid Documentation</a>
+                    <p class="fs--1 mb-0">Toggle container layout system </p>
                 </div>
             </div>
             <div class="form-check form-switch"><input class="form-check-input ms-0" id="mode-fluid" type="checkbox"
                     data-theme-control="isFluid"></div>
         </div>
-        <hr>
-        <div class="d-flex align-items-start"><img class="me-2" src="assets/img/icons/paragraph.svg" width="20"
-                alt="">
-            <div class="flex-1">
-                <h5 class="fs-0 d-flex align-items-center">Navigation Position</h5>
-                <p class="fs--1 mb-2">Select a suitable navigation system for your web application </p>
-                <div><select class="form-select form-select-sm" aria-label="Navbar position"
-                        data-theme-control="navbarPosition">
-                        <option value="vertical">Vertical</option>
-                        <option value="top">Top</option>
-                        <option value="combo">Combo</option>
-                        <option value="double-top">Double Top</option>
-                    </select></div>
-            </div>
-        </div>
-        <hr>
+        <hr> 
         <h5 class="fs-0 d-flex align-items-center">Vertical Navbar Style</h5>
         <p class="fs--1 mb-0">Switch between styles for your vertical navbar </p>
         <p> <a class="fs--1" href="modules/components/navs-and-tabs/vertical-navbar.html#navbar-styles">See
@@ -101,14 +74,6 @@
                             class="img-fluid img-prototype" src="assets/img/generic/vibrant.png" alt=""><span
                             class="label-text"> Vibrant</span></label></div>
             </div>
-        </div>
-        <div class="text-center mt-5"><img class="mb-4" src="assets/img/icons/spot-illustrations/47.png"
-                alt="" width="120">
-            <h5>Like What You See?</h5>
-            <p class="fs--1">Get Falcon now and create beautiful dashboards with hundreds of widgets.</p><a
-                class="mb-3 btn btn-primary"
-                href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/"
-                target="_blank">Purchase</a>
         </div>
     </div>
 </div><a class="card setting-toggle" href="#settings-offcanvas" data-bs-toggle="offcanvas">

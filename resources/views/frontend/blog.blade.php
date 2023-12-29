@@ -160,7 +160,7 @@
 									<div class="blog-post-txt">
 
 										<!-- Post Title -->
-										<h5 class="h5-xl steelblue-color"><a href="{{ route('frontend.singleblog') }}">20 Years of Caring. 15 Fact About MedService,
+										<h5 class="h5-xl steelblue-color"><a href="{{ route('frontend.singleblog') }}">20 Years of Caring. 15 Fact About MediLink,
 										   Melbourne's First Choice for Healthcare</a>
 										</h5>
 

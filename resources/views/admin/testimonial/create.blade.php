@@ -10,28 +10,27 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Add Testimonial</h2>
-                            <div class="breadcrumb-wrapper">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="">Dashboard</a>
-                                    </li>
-                                    <li class="breadcrumb-item"><a href="#">Add Testimonial</a>
-                                    </li>
-
-                                </ol>
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <div class="flex-between-center row">
+                                <div class="col-md">
+                                    <h3 class="mb-2 mb-md-0">Add Testimonial</h3>
+                                    <div class="breadcrumb-wrapper">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a href="{{ route('admin.dashboard') }}">Dashboard</a>
+                                            </li>
+                                            <li class="breadcrumb-item active">Add Testimonial
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <div class="row flex-between-end">
-                        </div>
-                    </div>
-                    <div class="card-body bg-light mb-4">
+
+                <div class="card mt-3 mb-3">
+                    <div class="card-body mb-4">
                         <div class="tab-content">
                             <form action="{{ route('admin.testimonial.store') }}" method="post"
                                 enctype="multipart/form-data">
@@ -108,8 +107,8 @@
                                     </div> --}}
                                 </div>
                                 <button class="btn btn-primary" type="submit">Submit</button>
-                        </div>
+                                </div>
                         </form>
                     </div>
                 </div>
-@endsection
+            @endsection
