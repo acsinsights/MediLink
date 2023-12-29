@@ -54,14 +54,8 @@ class HomeController extends Controller
     {
         return view('frontend.treatment');
     }
-    public function blog()
-    {
-        return view('frontend.blog');
-    }
-    public function singleblog()
-    {
-        return view('frontend.singleblog');
-    }
+ 
+
     public function contact()
     {
         return view('frontend.contact');

@@ -67,7 +67,7 @@
 
 
                     <li class="nl-simple" aria-haspopup="true"><a href="{{ route('frontend.treatment') }}">Treatments</a></li>
-                    <li class="nl-simple" aria-haspopup="true"><a href="{{ route('frontend.blog') }}">Blogs</a></li>
+                    <li class="nl-simple" aria-haspopup="true"><a href="{{ route('frontend.blog.index') }}">Blogs</a></li>
                     <li class="nl-simple" aria-haspopup="true"><a href="{{ route('frontend.contact') }}">Contact us</a></li>
 
 
