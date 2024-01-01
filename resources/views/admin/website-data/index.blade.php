@@ -1,5 +1,5 @@
 @extends('admin.includes.app')
-@section('title', 'Contact Form')
+@section('title', 'Website Data')
 @section('content')
 
 

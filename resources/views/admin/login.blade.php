@@ -15,8 +15,8 @@
     <!--    Favicons-->
     <!-- ===============================================-->
     <link rel="apple-touch-icon" href="{{ asset('admin-assets/img/medilink-fav-icon.svg') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin-assets/img/medilink-fav-icon.svg') }}" width="132"
-        height="72" alt="logo">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin-assets/img/medilink-fav-icon.svg') }}"
+        width="132" height="72" alt="logo">
 
     <meta name="theme-color" content="#ffffff">
     <script src="{{ asset('admin-assets/js/config.js') }}"></script>
@@ -171,7 +171,7 @@
                 </div>
             </div>
             <hr>
- 
+
             <div class="d-flex justify-content-between">
                 <div class="d-flex align-items-start"><img class="me-2"
                         src="{{ asset('admin-assets/img/icons/arrows-h.svg') }}" width="20" alt="">

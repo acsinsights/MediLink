@@ -512,7 +512,22 @@
                     </div>
                 </a>
             </li>
-
+            <li class="nav-item  ">
+                <a class="nav-link" href="/admin/blog" role="button" >
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-wrench"></span></span><span class="nav-link-text ps-1">Blogs</span>
+                    </div>
+                </a>
+            </li>
+            {{-- <a class="nav-link" href="/admin/blog" role="button" target="_blank">
+                <div class="d-flex align-items-center">
+                    <span class="nav-link-icon">
+                        <span class="fas fa-pen"></span>
+                    </span>
+                    <span class="nav-link-text ps-1">
+                        Blogs
+                    </span>
+                </div>
+            </a> --}}
 
           </ul>
         </div>

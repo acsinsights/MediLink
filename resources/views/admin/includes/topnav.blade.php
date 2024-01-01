@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light navbar-glass navbar-top navbar-expand" style="display: none;">
+<nav class="navbar navbar-light navbar-glass mt-3 navbar-top navbar-expand" style="display: none; ">
     <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button"
       data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse"
       aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span
@@ -15,7 +15,7 @@
               class="form-control search-input fuzzy-search" type="search" placeholder="Search..."
               aria-label="Search">
             <span class="fas fa-search search-box-icon"></span>
-          </form> 
+          </form>
         </div>
       </li>
     </ul>

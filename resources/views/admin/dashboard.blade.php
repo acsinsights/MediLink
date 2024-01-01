@@ -21,7 +21,20 @@
             </div>
         </div>
     </div>
-    <div class="row mb-3 g-3">`
+    <div class="row mb-3 g-3">
+        <div class="col-lg-4  ">
+            <div class="card overflow-hidden" style="min-width: 12rem">
+                <div class="bg-holder bg-card"
+                    style="background-image:url(/backend/img/icons/spot-illustrations/corner-2.png);"></div>
+                <div class="card-body position-relative">
+                    <h6>Total Blogs<span class="badge badge-subtle-warning rounded-pill ms-2"> </span></h6>
+                    <div class="display-4 fs-5 mb-2 fw-normal font-sans-serif text-warning">{{ $blogs }}</div>
+                    <a class="fw-semi-bold fs-10 text-nowrap" href="/admin/blog">See all
+                        <span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="col-sm-6 col-md-4">
             <div class="card overflow-hidden" style="min-width: 12rem">
                 <div class="bg-holder bg-card" style="background-image:url(/admin-assets/img/icons/spot-illustrations/corner-2.png);"></div>

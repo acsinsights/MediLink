@@ -1,5 +1,5 @@
 @extends('admin.includes.app')
-@section('title', 'Dashboard')
+@section('title', 'Edit Testimonials')
 @section('content')
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -9,23 +9,26 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Edit Testimonial Here</h2>
-                            <div class="breadcrumb-wrapper">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a>
-                                    </li>
-                                    <li class="breadcrumb-item"><a href="#">Edit Testimonial Here</a>
-                                    </li>
-                                </ol>
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <div class="flex-between-center row">
+                            <div class="col-md">
+                                <h3 class="mb-2 mb-md-0">Edit Testimonial</h3>
+                                <div class="breadcrumb-wrapper">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="{{ route('admin.dashboard') }}">Dashboard</a>
+                                        </li>
+                                        <li class="breadcrumb-item active">Edit Testimonial
+                                        </li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card mb-3  bg-light">
+                <div class="card mb-3 mt-4 bg-light">
                     <div class="card-body bg-light">
                         <div class="tab-content">
                             <form action="{{ route('admin.testimonial.update', $testimonials->id) }}" method="post"
@@ -105,5 +108,5 @@
                         </div>
                         </form>
                     </div>
-                </div>
-            @endsection
+
+                @endsection
