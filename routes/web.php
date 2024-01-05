@@ -21,7 +21,7 @@ use App\Http\Controllers\BlogController;
 Route::name('frontend.')->group(function () {
     Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
     Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
-    
+
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/appointment', [HomeController::class, 'appointment'])->name('appointment');
     Route::get('/service', [HomeController::class, 'service'])->name('service');
@@ -31,12 +31,7 @@ Route::name('frontend.')->group(function () {
     Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
     Route::post('/contact/store', [HomeController::class, 'contact_store'])->name('contact.store');
     Route::get('/table', [HomeController::class, 'table'])->name('table');
-
-
 });
-
-
-
 
 Route::redirect("/admin", "/login");
 
@@ -69,7 +64,6 @@ Route::group(['prefix' => 'admin'], function () {
                 Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
     });
 });
-
 
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 

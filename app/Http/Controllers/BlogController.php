@@ -5,9 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Wink\WinkPost;
 use Wink\WinkTag;
+use App\Models\WebsiteData;
 
 class BlogController extends Controller
 {
+    public function getWebsiteSettings()
+    {
+        $settings = WebsiteData::all();
+        $data = [];
+        foreach ($settings as  $setting) {
+            $data[$setting->slug] =   $setting->value;
+        }
+        return $data;
+    }
     public function index()
     {
         if (request()->has('tag')) {
@@ -20,7 +30,8 @@ class BlogController extends Controller
                 ->paginate(10);
         }
         $tags = WinkTag::all();
-        return view('frontend.blog.index', compact('posts', 'tags'));
+        $data = $this->getWebsiteSettings();
+        return view('frontend.blog.index', compact('posts', 'tags','data'));
     }
 
     public function show($slug)
@@ -32,13 +43,13 @@ class BlogController extends Controller
         // take tags of this post
         $tags = $post->tags()->get();
 
-
+        $data = $this->getWebsiteSettings();
         $recentPosts = WinkPost::select()
             ->live()
             ->orderBy('publish_date', 'DESC')
             ->limit(5)
             ->get();
 
-        return view('frontend.blog.show' , compact('post', 'tags', 'recentPosts'));
+        return view('frontend.blog.show' , compact('post', 'tags', 'recentPosts','data'));
     }
 }

@@ -21,12 +21,12 @@ class WebsiteDataSeeder extends Seeder
                 [
                     'name' => 'Sales Number',
                     'slug' => 'sales-number',
-                    'value' => null,
+                    'value' => '+91 83300 69122',
                 ],
                 [
                     'name' => 'Sales Email',
                     'slug' => 'sales-email',
-                    'value' => 'sales@medilink.com',
+                    'value' => ' care@medilink360.com',
                 ],
                 [
                     'name' => 'Company Address',
@@ -47,6 +47,11 @@ class WebsiteDataSeeder extends Seeder
                     'name' => 'Instagram Link',
                     'slug' => 'instagram-link',
                     'value' => 'http://instagram.com',
+                ],
+                [
+                    'name' => 'Youtube Link',
+                    'slug' => 'youtube-link',
+                    'value' => 'http://youtube.com',
                 ],
                 [
                     'name' => 'Linkedin Link',

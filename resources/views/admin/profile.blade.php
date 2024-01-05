@@ -2,7 +2,6 @@
 @section('title', 'Profile')
 @section('content')
 
-
     <div class="row g-0 mt-4">
         @if (session('status') === 'profile-updated')
             <div class="alert alert-success border-0 d-flex align-items-center" role="alert">
@@ -112,45 +111,9 @@
                         </form>
                     </div>
                 </div>
-
-                {{-- delete account --}}
-                {{-- <div class="card">
-                    <div class="card-header">
-                        <h5 class="mb-0">Danger Zone</h5>
-                    </div>
-                    <div class="card-body bg-light">
-                        <form method="post" action="{{ route('profile.destroy') }}" class="p-6">
-                            @csrf
-                            @method('delete')
-                            <div class="mt-6">
-                                <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
-
-                                <x-text-input
-                                    id="password"
-                                    name="password"
-                                    type="password"
-                                    class="mt-1 block w-3/4"
-                                    placeholder="{{ __('Password') }}"
-                                />
-
-                                <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
-                            </div>
-
-                            <h5 class="fs-0">Delete this account</h5>
-                            <p class="fs--1">Once you delete a account, there is no going back. Please be certain.</p>
-                            <button class="tn btn-falcon-danger d-block" type="submit">Delete Account </button>
-                        </form>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>
-
-
-
-
-
-
     <!-- Modal -->
     <div class="modal fade" id="addImagePopup" tabindex="-1" role="dialog" aria-labelledby="addImagePopupLabel"
         aria-hidden="true">
@@ -173,9 +136,6 @@
                                 <div class="form-group">
                                     <label for="profile_image">
                                         Profile Image
-                                        {{-- <span class="text-danger">
-                                            (300 x 200 px)
-                                        </span> --}}
                                     </label>
                                     <div class="custom-file">
                                         <input type="file" name="profile_image" class="form-control"
@@ -194,17 +154,9 @@
                         </div>
                     </form>
                 </div>
-                {{-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        Close
-                    </button>
-                </div> --}}
             </div>
         </div>
     </div>
-
-
-
 @endsection
 @section('js')
     @if ($errors->any())

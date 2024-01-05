@@ -1,8 +1,6 @@
 @extends('frontend.layouts.app')
 @section('title', 'Home')
 @section('page')
-
-
 			<!-- BREADCRUMB
 			============================================= -->
 			<div id="breadcrumb" class="division">
@@ -18,27 +16,19 @@
 								    	<li class="breadcrumb-item active" aria-current="page">Appointment</li>
 								  	</ol>
 								</nav>
-
 								<!-- Title -->
 								<h4 class="h4-sm steelblue-color" style="text-align:center;">Appointment</h4>
-
 							</div>
 						</div>
 					</div>  <!-- End row -->
 				</div>	<!-- End container -->
 			</div>	<!-- END BREADCRUMB -->
-
-
-
-
 			<!-- APPOINTMENT PAGE
 			============================================= -->
 			<div id="appointment-page" class="wide-60 appointment-page-section division">
 				<div class="container">
 				 	<div class="row">
-
-
-				 		<!-- SERVICE DETAILS -->
+					<!-- SERVICE DETAILS -->
 				 		<div class="col-lg-8">
 				 			<div class="txt-block pr-30">
 
@@ -137,61 +127,42 @@
 								   integer metus mollis faucibus enim. Nemo ipsam egestas volute turpis dolores ut aliquam quaerat
 								   sodales sapien undo pretium purus
 								</p>
-
-
 				 			</div>
 				 		</div>	<!-- END SERVICE DETAILS -->
-
-
 				 		<!-- SIDEBAR -->
 						<aside id="sidebar" class="col-lg-4">
-
-
 							<!-- TEXT WIDGET -->
 							<div id="txt-widget" class="sidebar-div mb-50">
-
 								<!-- Title -->
 								<h5 class="h5-sm steelblue-color">The Heart Of Clinic</h5>
-
 								<!-- Head of Clinic -->
 								<div class="txt-widget-unit mb-15 clearfix d-flex align-items-center">
-
 									<!-- Avatar -->
 									<div class="txt-widget-avatar">
 										<img src="{{ asset('frontend/images/head-of-clinic.jpg') }}" alt="testimonial-avatar">
 									</div>
-
 									<!-- Data -->
 									<div class="txt-widget-data">
 										<h5 class="h5-md steelblue-color">Dr. Jonathan Barnes</h5>
 										<span>Chief Medical Officer, Founder</span>
 										<p class="blue-color">1-800-1234-567</p>
 									</div>
-
 								</div>	<!-- End Head of Clinic -->
-
 								<!-- Text -->
 								<p class="p-sm">An enim nullam tempor sapien at gravida donec pretium ipsum porta justo
 								   integer at odiovelna vitae auctor integer congue magna purus
 								</p>
-
 								<!-- Button -->
 								<a href="{{ route('frontend.about') }}" class="btn btn-blue blue-hover">Learn More</a>
-
 							</div>	<!-- END TEXT WIDGET -->
-
-
 							<!-- SIDEBAR TABLE -->
 							<div class="sidebar-table blue-table sidebar-div mb-50">
-
 								<!-- Title -->
 								<h5 class="h5-md">Working Time</h5>
-
 								<!-- Text -->
 								<p class="p-sm">Porta semper lacus cursus, feugiat primis ultrice ligula risus auctor at
 								   tempus feugiat dolor lacinia cursus nulla vitae massa
 								</p>
-
 								<!-- Table -->
 								<table class="table">
 									<tbody>
@@ -217,19 +188,12 @@
 									   	 </tr>
 									  </tbody>
 								</table>
-
 								<!-- Title -->
 								<h5 class="h5-xs">Need a personal health plan?</h5>
-
 								<!-- Text -->
 								<p class="p-sm">Porta semper lacus cursus, and feugiat primis ultrice ligula at risus auctor</p>
-
 							</div>	<!-- END SIDEBAR TABLE -->
-
-
 						</aside>   <!-- END SIDEBAR -->
-
-
 					</div>	<!-- End row -->
 				</div>	 <!-- End container -->
 			</div>	<!-- END APPOINTMENT PAGE -->

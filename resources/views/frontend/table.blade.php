@@ -2,9 +2,6 @@
 @section('title', 'table')
 @section('page')
 
-
-
-
 			<!-- BREADCRUMB
 			============================================= -->
 			<div id="breadcrumb" class="division">
@@ -30,16 +27,12 @@
 				</div>	<!-- End container -->
 			</div>	<!-- END BREADCRUMB -->
 
-
-
-
 			<!-- SCHEDULE TIMETABLE
 			============================================= -->
 			<div id="timetable-page" class="timetable-section division">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-
 							<!-- TIMETABLE	-->
 							<div class="cd-schedule loading">
 
@@ -69,12 +62,9 @@
 										<li><span>19:00</span></li>
 									</ul>
 								</div> <!-- End Timeline -->
-
-
 								<!-- Events -->
 								<div class="events">
 									<ul>
-
 										<!-- MONDAY -->
 										<li class="events-group">
 											<div class="top-info"><span>Monday</span></div>
@@ -122,8 +112,6 @@
 											</ul>
 
 										</li>	<!-- END MONDAY -->
-
-
 										<!-- TUESDAY -->
 										<li class="events-group">
 											<div class="top-info"><span>Tuesday</span></div>
@@ -171,8 +159,6 @@
 											</ul>
 
 										</li>	<!-- END TUESDAY -->
-
-
 										<!-- WEDNESDAY -->
 										<li class="events-group">
 											<div class="top-info"><span>Wednesday</span></div>
@@ -213,8 +199,6 @@
 											</ul>
 
 										</li>	<!-- END WEDNESDAY -->
-
-
 										<!-- THURSDAY -->
 										<li class="events-group">
 											<div class="top-info"><span>Thursday</span></div>
@@ -253,10 +237,7 @@
 												</li>
 
 											</ul>
-
 										</li>	<!-- END THURSDAY -->
-
-
 										<!-- FRIDAY -->
 										<li class="events-group">
 											<div class="top-info"><span>Friday</span></div>
@@ -302,21 +283,12 @@
 													</div>
 												</li>
 											</ul>
-
 										</li>	<!-- END FRIDAY -->
-
 									</ul>
 								</div>	<!-- End Events -->
-
-
 							</div>	<!-- END TIMETABLE	-->
-
-
 						</div>
 					</div>     <!-- End row -->
 				</div>	    <!-- End container -->
 			</div>	 <!-- END SCHEDULE TIMETABLE -->
-
-
-
 @endsection

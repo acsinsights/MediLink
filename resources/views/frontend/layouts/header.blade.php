@@ -39,8 +39,6 @@
 
     <!-- TEMPLATE CSS -->
     <link href="{{asset ('frontend/css/style.css')}}" rel="stylesheet">
-
     <!-- RESPONSIVE CSS -->
     <link href="{{ asset('frontend/css/responsive.css') }}" rel="stylesheet">
-
 </head>

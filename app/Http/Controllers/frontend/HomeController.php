@@ -29,36 +29,39 @@ class HomeController extends Controller
     public function index()
     {
         $testimonials = Testimonial::all();
-
-        return view('frontend.home', compact( 'testimonials'));
+        $data = $this->getWebsiteSettings();
+        return view('frontend.home', compact( 'testimonials','data'));
     }
     public function appointment()
     {
-        return view('frontend.appointment');
+        $data = $this->getWebsiteSettings();
+        return view('frontend.appointment',compact('data'));
 
     }
-    public function service()
-    {
-        return view('frontend.service');
-    }
-    public function singleservice()
-    {
-        return view('frontend.singleservices');
-    }
+
     public function about()
     {
-        return view('frontend.about');
+        $data = $this->getWebsiteSettings();
+        return view('frontend.about',compact('data'));
+
+    }
+    public function blogs()
+    {
+        $data = $this->getWebsiteSettings();
+        return view('frontend.blog.index',compact('data'));
 
     }
     public function treatment()
     {
-        return view('frontend.treatment');
+        $data = $this->getWebsiteSettings();
+        return view('frontend.treatment',compact('data'));
     }
- 
+
 
     public function contact()
     {
-        return view('frontend.contact');
+        $data = $this->getWebsiteSettings();
+        return view('frontend.contact',compact('data'));
 
     }
     protected function contact_store(Request $request)

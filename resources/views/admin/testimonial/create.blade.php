@@ -2,7 +2,6 @@
 @section('title', 'Add Testimonials')
 @section('content')
 
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- BEGIN: Content-->
     <div class="app-content content ">
@@ -28,7 +27,6 @@
                             </div>
                         </div>
                     </div>
-
                 <div class="card mt-3 mb-3">
                     <div class="card-body mb-4">
                         <div class="tab-content">
@@ -58,6 +56,7 @@
                                                 {{ $message }}
                                             </span>
                                         @enderror
+
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label" for="basic-form-name"> Customer Company Name</label>
@@ -101,10 +100,6 @@
                                             {{ $message }}
                                         </span>
                                     @enderror
-                                    {{-- <div class="text-right" id="count">
-                                        <span id="current_count">0</span>
-                                        <span id="maximum_count">/ 120</span>
-                                    </div> --}}
                                 </div>
                                 <button class="btn btn-primary" type="submit">Submit</button>
                                 </div>

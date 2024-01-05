@@ -1,6 +1,7 @@
-	<!-- FOOTER-1
+
+			<!-- FOOTER-1
 			============================================= -->
-			<footer id="footer-1" class=" bg-image wide-40 footer division">
+			<footer id="footer-1" class="wide-40 footer division">
 				<div class="container">
 
 
@@ -14,21 +15,23 @@
 
 								<!-- Footer Logo -->
 								<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 360 x 80  pixels) -->
-								<img src="{{asset ('frontend/images/footer-logo.png') }}" width="180" height="40" alt="footer-logo">
+                                <img class="me-2"
+                                src="{{ asset('admin-assets/img/medilink-logo.png') }}" alt="" height="65">
 
 								<!-- Text -->
-								<p class="p-sm mt-20">Aliquam orci nullam tempor sapien gravida donec an enim ipsum porta
-								   justo at velna auctor congue
+								<p class="p-sm mt-20">We craft personalized healthcare with integrity, compassion, and optimal care for each individual's journey.
+
 								</p>
 
 								<!-- Social Icons -->
 								<div class="footer-socials-links mt-20">
 									<ul class="foo-socials text-center clearfix">
 
-										<li><a href="#" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
-										<li><a href="#" class="ico-twitter"><i class="fab fa-twitter"></i></a></li>
-										<li><a href="#" class="ico-google-plus"><i class="fab fa-google-plus-g"></i></a></li>
-										<li><a href="#" class="ico-tumblr"><i class="fab fa-tumblr"></i></a></li>
+										<li><a href="{{ $data['facebook-link'] }}" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
+										<li><a href="{{ $data['linkedin-link'] }}" class="ico-inkedin"><i class="fab fa-linkedin"></i></a></li>
+										<li><a href="{{ $data['youtube-link'] }}" class="ico-youtube"><i class="fab fa-youtube"></i></a></li>
+										<li><a href="{{ $data['instagram-link'] }}" class="ico-instagram"><i class="fab fa-instagram"></i></a></li>
+
 
 										<!--
 										<li><a href="#" class="ico-behance"><i class="fab fa-behance"></i></a></li>
@@ -54,17 +57,14 @@
 							<div class="footer-box mb-40">
 
 								<!-- Title -->
-								<h5 class="h5-xs">Our Location</h5>
+								<h5 class="h5-xs">Quick links</h5>
 
-								<!-- Address -->
-								<p>121 King Street, Melbourne,</p>
-								<p>Victoria 3000 Australia</p>
-
-								<!-- Email -->
-								<p class="foo-email mt-20">E: <a href="mailto:yourdomain@mail.com">hello@yourdomain.com</a></p>
-
-								<!-- Phone -->
-								<p>P: +12 9 8765 4321</p>
+								<ul class="footer-widget-list">
+                                    <li><a href="{{ route('frontend.home') }}">Home</a></li>
+                                    <li><a href="{{ route('frontend.treatment') }}">Treatments</a></li>
+                                    <li><a href="{{ route('frontend.blog.index') }}">Blogs</a></li>
+                                    <li><a href="{{ route('frontend.about') }}">About Us</a></li>
+                                </ul>
 
 							</div>
 						</div>
@@ -75,14 +75,18 @@
 							<div class="footer-box mb-40">
 
 								<!-- Title -->
-								<h5 class="h5-xs">Working Time</h5>
+								<h5 class="h5-xs">Helpful Links</h5>
 
-								<!-- Working Hours -->
-								<p class="p-sm">Mon - Wed - <span>9:00 AM - 7:00 PM</span></p>
-								<p class="p-sm">Thursday - <span>9:00 AM - 6:30 PM</span></p>
-								<p class="p-sm">Friday - <span>9:00 AM - 6:00 PM</span></p>
-								<p class="p-sm">Sat - Sun - <span>Closed</span></p>
 
+								<!-- Address -->
+								<p>Policy Page 1</p>
+								<p>Policy Page 2</p>
+
+								<!-- Email -->
+								<p >Policy Page 3</p>
+
+								<!-- Phone -->
+								<p>Policy Page 4</p>
 							</div>
 						</div>
 
@@ -92,15 +96,26 @@
 							<div class="footer-box mb-40">
 
 								<!-- Title -->
-								<h5 class="h5-xs">Emergency Cases</h5>
+								<h5 class="h5-xs">Get in Touch</h5>
 
 								<!-- Footer List -->
-								<h5 class="h5-xl blue-color">1-800-123-4560</h5>
+                                <div class="mrb-10">
 
-								<!-- Text -->
-								<p class="p-sm mt-15">Aliquam orci nullam undo tempor sapien gravida donec enim ipsum porta
-								   justo velna aucto magna
-								</p>
+                                <p>
+                                    <a style="color: #555" href="tel:">
+                                        <i class="fas fa-phone mrr-10"></i>
+                                        <a href="tel: {{ $data['sales-number'] }}"> {{ $data['sales-number'] }}</a>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="mrb-10">
+                                <p>
+                                    <a style="color: #555" href="mailto:">
+                                        <i class="fas fa-envelope mrr-10"></i>
+                                        <a href="mailto: {{ $data['sales-email'] }}"> {{ $data['sales-email'] }}</a>
+                                    </a>
+                                </p>
+                            </div>
 
 							</div>
 						</div>
@@ -113,16 +128,14 @@
 					<div class="bottom-footer">
 						<div class="row">
 							<div class="col-md-12">
-								<p class="footer-copyright">&copy; 2019 <span>MediLink</span>. All Rights Reserved</p>
+								<p class="footer-copyright">&copy; 2019 <span>Medilink</span>. All Rights Reserved</p>
 							</div>
 						</div>
 					</div>
 
 
 				</div>	   <!-- End container -->
-			</footer>
-            <!-- END FOOTER-1 -->
-
+			</footer>	<!-- END FOOTER-1 -->
 
 			<!-- EXTERNAL SCRIPTS
 		============================================= -->
@@ -149,15 +162,11 @@
 		<script src="{{asset('frontend/js/jquery.ajaxchimp.min.js')}}"></script>
 		<script src="{{asset('frontend/js/wow.js')}}"></script>
         <script src="{{asset('frontend/js/timetable.js')}}"></script>
-
 		<!-- Custom Script -->
 		<script src="{{asset('frontend/js/custom.js')}}"></script>
 
 		<script>
 			new WOW().init();
 		</script>
-
-
-
 		<script src="{{asset('frontend/js/changer.js')}}"></script>
 		<script defer="" src="{{asset('frontend/js/styleswitch.js')}}"></script>
